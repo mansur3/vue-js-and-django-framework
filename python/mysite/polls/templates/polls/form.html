@@ -1,0 +1,26 @@
+<div>
+  <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+      <legend>
+        <h1>{{question.question_text}}</h1>
+      </legend>
+      <!-- if error message -->
+      {% if question.error_message %}
+      <p>
+        <strong>{{question.error_message}}</strong>
+      </p>
+      {% endif %}
+      <!-- for set choice and increment the vote -->
+      {% for choice in question.choice_set.all %}
+      <input
+        type="radio"
+        name="choice"
+        value="{{choice.id}}"
+        id="choice{{forloop.counter}}" />
+      <label for="choice{{forloop.counter}}"> {{choice.choice_text}} </label>
+      {% endfor %}
+    </fieldset>
+    <input type="submit" value="vote" />
+  </form>
+</div>
