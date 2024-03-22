@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'gallery.apps.GalleryConfig',
+    'team_member.apps.TeamMemberConfig',
+    'aboutus.apps.AboutusConfig',
     'service.apps.ServiceConfig',
     'bank.apps.BankConfig',
     'django.contrib.admin',

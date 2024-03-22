@@ -49,6 +49,7 @@ class ServiceView(generics.GenericAPIView):
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
+            serializer.save()
             return Response({
                 "status": "success",
                 "data": {
