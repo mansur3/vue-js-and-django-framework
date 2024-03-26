@@ -31,7 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'gallery.apps.GalleryConfig',
+    'contact_us.apps.ContactUsConfig',
+    'testimonial.apps.TestimonialConfig',
+    'service_section.apps.ServiceSectionConfig',
+    'work_flow.apps.WorkFlowConfig',
+    'gallery_data.apps.GalleryDataConfig',
     'team_member.apps.TeamMemberConfig',
     'aboutus.apps.AboutusConfig',
     'service.apps.ServiceConfig',
@@ -47,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'contact_us.middleware.custom-middleware.CustomMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

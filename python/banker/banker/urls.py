@@ -23,5 +23,9 @@ urlpatterns = [
     path('api/service/', include('service.urls')),
     path('api/about-us/', include('aboutus.urls')),
     path('api/team-member/', include('team_member.urls')),
-    path('api/gallery/', include('gallery.urls'))
+    path('api/gallery/', include('gallery_data.urls')),
+    path('api/work-flow/', include('work_flow.urls')),
+    path('api/service-section/', include('service_section.urls')),
+    path('api/testimonial/', include('testimonial.urls')),
+    path('api/contact-us', include('contact_us.urls'))
 ]
